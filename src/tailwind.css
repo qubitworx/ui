@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+:root {
+  --primary: 216;
+  --error: 0;
+}
+
+body,
+html {
+  /* blue colors */
+  --blue-stroke: var(--primary), 73%, 53%;
+  --blue-fill: var(--primary), 73%, 58%;
+  --blue-hover: var(--primary), 56%, 60%;
+  --blue-active: var(--primary), 86%, 42%;
+  --blue-text: var(--primary), 0%, 100%;
+  --blue-text-hover: var(--primary), 0%, 100%;
+  --blue-text-active: var(--primary), 0%, 100%;
+  --blue-text-disabled: var(--primary), 19%, 74%;
+  --blue-dropshadow: var(--primary), 92%, 50%;
+
+  /* white color */
+  --white-stroke: var(--primary), 0%, 82%;
+  --white-fill: var(--primary), 0%, 100%;
+  --white-hover: var(--primary), 0%, 75%;
+  --white-active: var(--primary), 0%, 100%;
+  --white-text: var(--primary), 22%, 18%;
+  --white-text-hover: var(--primary), 22%, 18%;
+  --white-text-active: var(--primary), 22%, 18%;
+  --white-text-disabled: var(--primary), 19%, 74%;
+  --white-dropshadow: var(--primary), 0%, 63%;
+
+  /* red color */
+  --error-stroke: var(--error), 100%, 63%;
+  --error-fill: var(--error), 94%, 77%;
+  --error-hover: var(--error), 90%, 75%;
+  --error-active: var(--error), 0%, 100%;
+  --error-text: var(--error), 35%, 93%;
+  --error-text-hover: var(--error), 35%, 93%;
+  --error-text-active: var(--error), 35%, 93%;
+  --error-text-disabled: var(--error), 50%, 93%;
+  --error-dropshadow: var(--error), 41%, 32%;
+}
