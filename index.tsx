@@ -3,3 +3,4 @@ export * from "./src/Input";
 export * from "./src/Avatar";
 export * from "./src/PlainButton";
 export * from "./src/Tabs";
+export * from "./src/Loading";
