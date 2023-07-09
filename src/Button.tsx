@@ -12,9 +12,10 @@ const buttonVariants = cva(
         secondary:
           "bg-white-fill border-2 border-white-stroke shadow-white-dropshadow text-white-text hover:shadow-white-dropshadow active:bg-white-fill active:shadow-white-dropshadow",
         error:
-          "bg-error-fill border-2 border-error-stroke shadow-error-dropshadow text-error-text hover:shadow-error-dropshadow active:bg-error-fill active:shadow-error-dropshadow",
+          "bg-white-fill border-2 border-error-stroke shadow-error-dropshadow text-white-text hover:shadow-error-dropshadow active:bg-white-fill active:shadow-error-dropshadow",
       },
       size: {
+        eq: "p-1",
         sm: "px-2 py-1 text-sm",
         md: "px-4 py-1 text-md",
         lg: "px-6 py-2 text-lg",
@@ -54,4 +55,4 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   }
 );
 
-export default Button;
+export { Button };

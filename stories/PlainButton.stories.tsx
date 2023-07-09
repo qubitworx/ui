@@ -1,14 +1,14 @@
 import type { Meta } from "@storybook/react";
-import PlainButton from "../src/PlainButton";
+import { FlatButton } from "../src/PlainButton";
 
-const meta: Meta<typeof PlainButton> = {
+const meta: Meta<typeof FlatButton> = {
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
-  component: PlainButton,
+  component: FlatButton,
 
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
-  render: (props) => <PlainButton {...props} />,
+  render: (props) => <FlatButton {...props} />,
 };
 
 export default meta;

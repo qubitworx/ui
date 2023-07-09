@@ -24,13 +24,13 @@ const buttonVariants = cva("rounded-md transition-all duration-150", {
   },
 });
 
-export interface ButtonProps
+export interface FlatButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
   loading?: boolean;
 }
 
-const FlatButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
+const FlatButton = React.forwardRef<HTMLButtonElement, FlatButtonProps>(
   ({ className, variant, size, ...props }, ref) => {
     return (
       <button
@@ -51,4 +51,4 @@ const FlatButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
   }
 );
 
-export default FlatButton;
+export { FlatButton };

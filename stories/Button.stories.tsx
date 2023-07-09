@@ -1,5 +1,5 @@
 import type { Meta } from "@storybook/react";
-import Button from "../src/Button";
+import { Button } from "../src/Button";
 
 const meta: Meta<typeof Button> = {
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment

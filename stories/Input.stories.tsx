@@ -1,10 +1,11 @@
 import type { Meta } from "@storybook/react";
-import Input from "../src/Input";
-import { Send } from "../src/icons";
+import { Input } from "../src/Input";
+import { ApplePodcastsLogo } from "../src/icons";
 
 const meta: Meta<typeof Input> = {
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   component: Input,
 
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -15,7 +16,7 @@ const meta: Meta<typeof Input> = {
       iconOnClick={() => {
         alert("clicked");
       }}
-      endIcon={<Send size={16} />}
+      endIcon={<ApplePodcastsLogo size={16} />}
       {...props}
     />
   ),
