@@ -124,7 +124,9 @@ export const CSSTabs = ({
         style={hoverStyles}
       />
       <div
-        className={"absolute z-10 bottom-0 left-0 h-0.5 bg-white-text"}
+        className={
+          "absolute z-10 bottom-0 left-0 h-[3px] bg-white-text rounded-t-xl"
+        }
         style={selectStyles}
       />
     </nav>

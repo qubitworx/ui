@@ -4,3 +4,6 @@ export * from "./src/Avatar";
 export * from "./src/PlainButton";
 export * from "./src/Tabs";
 export * from "./src/Loading";
+export * from "./src/FlatInput";
+export * from "./src/Select";
+export * from "./src/Checkbox";
