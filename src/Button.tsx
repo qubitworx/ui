@@ -12,7 +12,7 @@ const buttonVariants = cva(
         secondary:
           "bg-white-fill border-2 border-white-stroke shadow-white-dropshadow text-white-text hover:shadow-white-dropshadow active:bg-white-fill active:shadow-white-dropshadow",
         error:
-          "bg-white-fill border-2 border-error-stroke shadow-error-dropshadow text-white-text hover:shadow-error-dropshadow active:bg-white-fill active:shadow-error-dropshadow",
+          "bg-error-fill border-2 border-error-stroke shadow-error-dropshadow text-error-text hover:shadow-error-dropshadow active:bg-white-fill active:shadow-error-dropshadow",
       },
       size: {
         eq: "p-1",

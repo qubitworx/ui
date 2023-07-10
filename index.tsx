@@ -7,3 +7,4 @@ export * from "./src/Loading";
 export * from "./src/FlatInput";
 export * from "./src/Select";
 export * from "./src/Checkbox";
+export * from "./src/AlertDialog";
