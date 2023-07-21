@@ -26,7 +26,7 @@ const Select = (props: Props) => (
     <SelectPrimitives.Trigger aria-label={props.ariaLabel} asChild>
       <Button
         variant={"secondary"}
-        className="flex items-center justify-start gap-2 text-sm px-4 h-[36px]"
+        className="flex items-center justify-between gap-2 text-sm px-4 h-[36px]"
       >
         <SelectPrimitives.Value placeholder={props.placeholder} />
         <SelectPrimitives.Icon className="text-violet11">
