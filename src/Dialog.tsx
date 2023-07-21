@@ -40,9 +40,11 @@ const Dialog = (props: Props) => (
 export const DialogButtons = ({
   onClick,
   confirmationText,
+  loading,
 }: {
   onClick?: () => void;
   confirmationText?: string;
+  loading?: boolean;
 }) => {
   return (
     <div className="flex gap-2 items-center justify-end mt-2">
@@ -54,7 +56,7 @@ export const DialogButtons = ({
       >
         Cancel
       </Button>
-      <Button variant="primary" onClick={onClick}>
+      <Button loading={loading} variant="primary" onClick={onClick}>
         {confirmationText || "Confirm"}
       </Button>
     </div>
