@@ -17,7 +17,7 @@ const AlertDialog = (props: Props) => {
 
   return (
     <AlertDialogPrimitives.Root>
-      <AlertDialogPrimitives.Trigger>
+      <AlertDialogPrimitives.Trigger asChild>
         {props.children}
       </AlertDialogPrimitives.Trigger>
       <AlertDialogPrimitives.Portal>
