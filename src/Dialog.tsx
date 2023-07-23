@@ -41,10 +41,12 @@ export const DialogButtons = ({
   onClick,
   confirmationText,
   loading,
+  disabled,
 }: {
   onClick?: () => void;
   confirmationText?: string;
   loading?: boolean;
+  disabled?: boolean;
 }) => {
   return (
     <div className="flex gap-2 items-center justify-end mt-2">
@@ -56,7 +58,12 @@ export const DialogButtons = ({
       >
         Cancel
       </Button>
-      <Button loading={loading} variant="primary" onClick={onClick}>
+      <Button
+        disabled={disabled}
+        loading={loading}
+        variant="primary"
+        onClick={onClick}
+      >
         {confirmationText || "Confirm"}
       </Button>
     </div>
