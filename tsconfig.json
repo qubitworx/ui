@@ -20,6 +20,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "stories", "index.tsx", "icons.tsx"],
+  "include": ["src", "stories", "index.tsx", "icons.tsx", "toast.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
