@@ -62,7 +62,10 @@ export const DialogButtons = ({
         disabled={disabled}
         loading={loading}
         variant="primary"
-        onClick={onClick}
+        onClick={() => {
+          onClick?.();
+          document.getElementById("dialog-close")?.click();
+        }}
       >
         {confirmationText || "Confirm"}
       </Button>
