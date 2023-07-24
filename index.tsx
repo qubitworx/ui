@@ -9,3 +9,4 @@ export * from "./src/Select";
 export * from "./src/Checkbox";
 export * from "./src/AlertDialog";
 export * from "./src/Dialog";
+export * from "./src/TextArea";
