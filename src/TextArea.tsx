@@ -25,7 +25,7 @@ const inputvariants = cva(
   }
 );
 
-export interface InputProps
+export interface TextAreaProps
   extends React.InputHTMLAttributes<HTMLTextAreaElement>,
     VariantProps<typeof inputvariants> {
   loading?: boolean;
@@ -36,7 +36,7 @@ export interface InputProps
   endIcon?: React.ReactNode;
 }
 
-const TextArea = React.forwardRef<HTMLTextAreaElement, InputProps>(
+const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
   ({ className, variant, inputSize, ...props }, ref) => {
     return (
       <textarea
