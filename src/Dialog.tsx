@@ -62,8 +62,12 @@ export const DialogButtons = ({
         disabled={disabled}
         loading={loading}
         variant="primary"
-        onClick={() => {
-          onClick?.();
+        type="submit"
+        // eslint-disable-next-line @typescript-eslint/no-misused-promises
+        onClick={async () => {
+          if (onClick) {
+            await Promise.all([onClick()]);
+          }
           document.getElementById("dialog-close")?.click();
         }}
       >
