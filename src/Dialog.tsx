@@ -43,7 +43,7 @@ export const DialogButtons = ({
   loading,
   disabled,
 }: {
-  onClick?: () => void;
+  onClick?: () => Promise<void>;
   confirmationText?: string;
   loading?: boolean;
   disabled?: boolean;
