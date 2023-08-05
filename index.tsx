@@ -10,3 +10,5 @@ export * from "./src/Checkbox";
 export * from "./src/AlertDialog";
 export * from "./src/Dialog";
 export * from "./src/TextArea";
+export * from "./src/Table";
+export * from "./src/Dropdown";

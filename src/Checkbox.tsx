@@ -7,6 +7,8 @@ const AnimatedCheckbox = motion(CheckboxPrimivites.Indicator);
 
 interface Props {
   onChange?: (value: boolean) => void;
+  defaultChecked?: boolean;
+  checked?: boolean;
 }
 
 const Checkbox = (props: Props) => {
@@ -20,12 +22,13 @@ const Checkbox = (props: Props) => {
           if (props.onChange) props.onChange(value);
         }
       }}
-      defaultChecked
+      defaultChecked={props.defaultChecked}
+      checked={props.checked}
       id="c1"
-      className="w-6 h-6 border-2 grid place-items-center rounded-md shadow-[0px_1px_0px_0px] shadow-white-dropshadow"
+      className="w-6 h-6 border-2 grid place-items-center rounded-md"
     >
-      <AnimatedCheckbox className="text-blue-fill">
-        <Check />
+      <AnimatedCheckbox className="text-white-text">
+        <Check weight="bold" />
       </AnimatedCheckbox>
     </CheckboxPrimivites.Root>
   );

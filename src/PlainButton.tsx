@@ -11,6 +11,8 @@ const buttonVariants = cva("rounded-md transition-all duration-150", {
         "bg-white-fill border-2 border-white-stroke hover:bg-white-stroke text-white-text active:bg-white-fill",
       error:
         "bg-error-fill border-2 border-error-stroke hover:bg-error-stroke text-error-text active:bg-error-fill",
+      nooutline:
+        "bg-transparent border-2 !px-2 border-transparent hover:bg-white-hover/40 flex gap-2 items-center",
     },
     size: {
       sm: "px-2 py-1 text-sm",
