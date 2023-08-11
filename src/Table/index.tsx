@@ -32,6 +32,10 @@ interface DataTableProps<TData, TValue> {
   data: TData[];
   Header: (props: any) => JSX.Element;
   filterColumn: string;
+  onPaginate?: (page: boolean) => void;
+  currentPage?: number;
+  onSearch?: (search: string) => void;
+  searchValue?: string;
 }
 
 const DataTable = <TData, TValue>({
@@ -40,6 +44,10 @@ const DataTable = <TData, TValue>({
 
   Header,
   filterColumn,
+  onSearch,
+  onPaginate,
+  currentPage,
+  searchValue,
 }: DataTableProps<TData, TValue>) => {
   const [sorting, setSorting] = useState<SortingState>([]);
   const [rowSelection, setRowSelection] = useState({});
@@ -55,7 +63,7 @@ const DataTable = <TData, TValue>({
     onRowSelectionChange: setRowSelection,
     onColumnFiltersChange: setColumnFilters,
     getFilteredRowModel: getFilteredRowModel(),
-
+    manualPagination: onPaginate ? true : false,
     state: {
       sorting,
       rowSelection,
@@ -69,11 +77,17 @@ const DataTable = <TData, TValue>({
         <Input
           containerClassName="w-10/12"
           placeholder="Filter emails..."
-          onInput={(event) =>
-            table
-              .getColumn(filterColumn)
-              ?.setFilterValue(event.currentTarget.value)
+          onInput={(event) => {
+            if (onSearch) {
+              onSearch(event.currentTarget.value);
+            } else {
+              table
+                .getColumn(filterColumn)
+                ?.setFilterValue(event.currentTarget.value)
+            }
           }
+          }
+          value={searchValue}
           className="w-full"
         />
       </Header>
@@ -88,9 +102,9 @@ const DataTable = <TData, TValue>({
                       {header.isPlaceholder
                         ? null
                         : flexRender(
-                            header.column.columnDef.header,
-                            header.getContext()
-                          )}
+                          header.column.columnDef.header,
+                          header.getContext()
+                        )}
                     </TableHead>
                   );
                 })}
@@ -137,21 +151,41 @@ const DataTable = <TData, TValue>({
           <Button
             variant={"secondary"}
             size="sm"
-            onClick={() => table.previousPage()}
-            disabled={!table.getCanPreviousPage()}
+            onClick={() => {
+              if (onPaginate) {
+                onPaginate(false);
+              } else {
+                table.previousPage();
+              }
+            }}
+            disabled={currentPage ? currentPage === 0 : !table.getCanPreviousPage()}
           >
             Previous
           </Button>
           <Button
             variant={"secondary"}
             size="sm"
-            onClick={() => table.nextPage()}
+            onClick={() => {
+              if (onPaginate) {
+                onPaginate(true);
+              } else {
+                table.nextPage();
+              }
+            }}
             disabled={!table.getCanNextPage()}
           >
             Next
           </Button>
         </div>
+        {currentPage && (
+          <div className="flex w-full items-center justify-between">
+            <div className="flex-1 text-sm text-muted-foreground">
+              Page {currentPage + 1}
+            </div>
+          </div>
+        )}
       </div>
+
     </div>
   );
 };
