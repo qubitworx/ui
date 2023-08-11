@@ -17,7 +17,7 @@ const Tabs = (props: Props) => {
   return (
     <>
       <CSSTabs {...css.tabProps} />
-      <div className="flex flex-col">{css.selectedTab.children}</div>
+      <div className="flex flex-col h-full">{css.selectedTab.children}</div>
     </>
   );
 };
